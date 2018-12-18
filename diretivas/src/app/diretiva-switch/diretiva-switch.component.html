@@ -1,0 +1,25 @@
+	<nav class= 'navbar navbar-dark bg-primary' >
+		
+		<div class='nav navbar-nav'>
+			
+
+			<a (click) = 'seletor=(1)' class='nav-item nav-link' [class.active] = 'seletor==1'> HOME </a>
+			<a (click) = 'seletor=(2)' class='nav-item nav-link' [class.active] = 'seletor==2'> DATA </a>
+			<a (click) = 'seletor=(3)' class='nav-item nav-link' [class.active] = 'seletor==3'> EXIT </a>
+
+
+		</div>
+	
+	</nav>	
+
+	<div class='container' [ngSwitch]  = 'seletor' >
+
+		<p *ngSwitchCase= "1" > Estou in HOME </p>
+		<p *ngSwitchCase= "2" > Estou in DATA </p>
+		<p *ngSwitchCase= "3" > Estou in EXIT </p>
+		<p *ngSwitchDefault > BUGOU </p>
+
+
+
+	
+	</div>	

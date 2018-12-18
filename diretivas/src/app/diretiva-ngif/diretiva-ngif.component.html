@@ -1,0 +1,21 @@
+<div style= 'text-align: center; margin 0 auto;'>
+
+<h2> Diretiva NgIf </h2>
+<p *ngIf="cursos.length>0"> Lista de cursos aqui </p>
+<p *ngIf="cursos.length<=0"> Não há cursos para serem listados </p>
+
+	
+	<ul style="list-style-type: none;" *ngFor = "let curso of cursos, let numero = index">
+		<li >{{numero+1}} : {{curso}} </li>
+	</ul>	
+
+	
+<!--
+ngIf   = para árvores grandes de elementos, com muitos if/elses. Conteúdo escondido, será destruído
+[hidden] = para casos mais simples.É mais barato...
+
+-->
+
+<p [hidden]="!cursos.length>0"> Esses foram os cursos que temos </p>
+<p [hidden]="cursos.length>0"> Em breve teremos alguns cursos oferecidos </p>
+</div>
