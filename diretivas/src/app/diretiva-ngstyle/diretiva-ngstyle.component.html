@@ -1,0 +1,38 @@
+
+<div>
+	<h2 > Styles com Property Binding </h2>
+	<button  (click)='transforma()' 
+			[style.backgroundColor] = "colorido ? 'blue' : 'gray'  "
+			[style.color] = 		  "colorido ? 'white' : 'black'  "
+			[style.fontWeight] =      "colorido ? 'bold' : 'normal'  "
+			[style.fontSize] =        "tamanho + 'px' "			   					
+
+	>MUDAR ATRIBUTO</button> 
+
+	<br>
+	
+
+	<input (keyup)='aumenta($event)' [(ngModel)] = 'tamanho' />
+
+	<h2 > Styles com *ngStyle </h2>
+
+	<button  (click)='transforma()'
+
+			[ngStyle] = "{
+						'backgroundColor':  colorido ? 'blue' : 'gray' ,
+						'color':  colorido ? 'white' : 'black' 		   ,
+						'fontWeight':  colorido ? 'bold' : 'normal'    , 
+						'fontSize':    tamanho + 'px'  
+
+			}"	
+
+
+	>MUDAR ATRIBUTO</button> 
+
+	<br>
+	
+
+	<input (keyup)='aumenta($event)' [(ngModel)] = 'tamanho' />
+
+
+</div>	

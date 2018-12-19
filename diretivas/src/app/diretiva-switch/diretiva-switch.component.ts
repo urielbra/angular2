@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivaSwitchComponent implements OnInit {
 
-  seletor:number = '-1'
+  seletor:number = -1;
 
   constructor() { }
 
